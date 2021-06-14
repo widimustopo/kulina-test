@@ -12,13 +12,13 @@ func convert(items []string) []string {
 
 		zeroCount := len(items) - i - 1
 		multipler := 0
-		one := items[i]
+		strItems := items[i]
 		if items[i] != "0" {
 			for multipler < zeroCount {
-				one = one + "0"
+				strItems = strItems + "0"
 				multipler++
 			}
-			result = append(result, one)
+			result = append(result, strItems)
 		}
 	}
 

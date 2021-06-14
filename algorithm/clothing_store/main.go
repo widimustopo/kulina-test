@@ -8,15 +8,15 @@ import (
 func findPairing(items []int) int {
 	var res int
 
-	dict := make(map[int]int)
+	distincts := make(map[int]int)
 	for _, num := range items {
 
-		dict[num] = dict[num] + 1
-		fmt.Println(dict[num])
+		distincts[num] = distincts[num] + 1
+		fmt.Println(distincts[num])
 	}
 
-	for _, y := range dict {
-		div := y / 2
+	for _, distinct := range distincts {
+		div := distinct / 2
 		res += div
 	}
 
